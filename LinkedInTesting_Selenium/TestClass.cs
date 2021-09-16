@@ -1,3 +1,7 @@
+/*Project = Automation Testing -LinkedIn 
+ * created by = Soubarnika Muthu
+ * date = 15/09/21
+ */
 using NUnit.Framework;
 
 namespace LinkedInTesting_Selenium
@@ -10,7 +14,7 @@ namespace LinkedInTesting_Selenium
         {
             
             Action.DoAction.Assert_Titleof_Webpage();
-            Action.DoAction.Login_into_LinkedIn();
+           // Action.DoAction.Login_into_LinkedIn();
            
         }
         [Test]

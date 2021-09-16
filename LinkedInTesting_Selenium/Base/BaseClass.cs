@@ -1,11 +1,10 @@
-﻿using NUnit.Framework;
+﻿/*Project = Automation Testing -LinkedIn 
+ * created by = Soubarnika Muthu
+ * date = 15/09/21
+ */
+using NUnit.Framework;
 using OpenQA.Selenium;
 using OpenQA.Selenium.Chrome;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace LinkedInTesting_Selenium.Base
 {
