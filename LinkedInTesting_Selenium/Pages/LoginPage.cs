@@ -24,7 +24,7 @@ namespace LinkedInTesting_Selenium.Pages
         [CacheLookup]
         public IWebElement password;
 
-        [FindsBy(How = How.XPath, Using = "//*[@id='main - content']/section[1]/div[2]/form/button")]
+        [FindsBy(How = How.ClassName, Using = "sign-in-form__submit-button")]
         [CacheLookup]
         public IWebElement loginbt;
     }
