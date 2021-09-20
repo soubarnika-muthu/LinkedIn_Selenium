@@ -33,7 +33,7 @@ namespace LinkedInTesting_Selenium.Base
             //Creating an instance webdriver
             driver = new ChromeDriver();
             driver.Url = "https://www.linkedin.com/";
-            
+
             // To maximize browser
             driver.Manage().Window.Maximize();
             log.Debug("navigating to url");

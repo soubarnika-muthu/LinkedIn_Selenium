@@ -2,34 +2,32 @@
  * created by = Soubarnika Muthu
  * date = 15/09/21
  */
+using AventStack.ExtentReports;
+using LinkedInTesting_Selenium.Action;
 using NUnit.Framework;
 
 namespace LinkedInTesting_Selenium
 {
     public class Tests : Base.BaseClass
     {
-
+        ExtentReports reports = ReportClass.Start_Report();
+        ExtentTest test;
         [Test]
-          public void Test__LoginPage()
-          {
-
-              Action.DoAction.Assert_Titleof_Webpage();
-            // Action.DoAction.Login_into_LinkedIn();
-            Action.DoAction.ReadingDataFromFile(driver);
-
-
-          }
-         /* [Test]
-          public void Test_Keyboardactions()
-          {
-              Action.DoAction.PerformKeyboardActions();
-          }*/
-      /*  [Test]
-        public void Signup_Test()
+        public void Test__LoginPage()
         {
-              Action.DoAction.Signup_LinkedIn();
-        }*/
+            test = reports.CreateTest("Tests");
+            test.Log(Status.Info, "Automation LinkedIn");
 
+            Action.DoAction.Assert_Titleof_Webpage();
+            Action.DoAction.Login_into_LinkedIn(driver);
 
+            test.Log(Status.Pass, "Test Passes");
+            reports.Flush();
+        }
+        //[Test]
+        //public void Signup_Test()
+        //{
+        //    Action.DoAction.Signup_LinkedIn();
+        //}
     }
 }
