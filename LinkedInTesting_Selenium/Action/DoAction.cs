@@ -25,7 +25,7 @@ namespace LinkedInTesting_Selenium.Action
         {
             login = new LoginPage(driver);
             //specifying file path
-            Takescreenshot();
+            //Takescreenshot();
             ExcelOperations.PopulateInCollection(@"C:\Users\soubarnika.v\source\repos\LinkedInTesting_Selenium\LinkedInTesting_Selenium\TestDataFiles\Login_TestData.xlsx");
             Debug.WriteLine("**");
             //Reads data from excel file and enters data into webpage using sendkeys method
@@ -75,16 +75,6 @@ namespace LinkedInTesting_Selenium.Action
             uploadphoto.postbt.Click();
             System.Threading.Thread.Sleep(6000);
 
-            IAlert alert = driver.SwitchTo().Alert();
-            string msg=alert.Text;
-            if (msg.Equals("Post successful."))
-            {
-                Console.WriteLine("successful");
-            }
-            else
-            {
-                Console.WriteLine("failed"+msg);
-            }
 
         }
 

@@ -33,17 +33,17 @@ namespace LinkedInTesting_Selenium
               //test.Log(Status.Pass, "Test Passes");
               reports.Flush();
           }*/
-        [Test]
-        public void Test_PhotoUploading()
-        {
-            Action.DoAction.Upload_Photo();
-
-        }
-
         //[Test]
-        //public void Test_VedioUploading()
+        //public void Test_PhotoUploading()
         //{
-        //    Action.DoAction.Upload_Vedio();
+        //    Action.DoAction.Upload_Photo();
+
         //}
+
+        [Test]
+        public void Test_VedioUploading()
+        {
+            Action.DoAction.Upload_Vedio();
+        }
     }
 }
