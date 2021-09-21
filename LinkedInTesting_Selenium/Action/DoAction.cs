@@ -1,4 +1,5 @@
-﻿using LinkedInTesting_Selenium.Operations;
+﻿using AutoItX3Lib;
+using LinkedInTesting_Selenium.Operations;
 using LinkedInTesting_Selenium.Pages;
 using NUnit.Framework;
 using OpenQA.Selenium;
@@ -36,11 +37,88 @@ namespace LinkedInTesting_Selenium.Action
 
             //using the click function 
             login.loginbt.Click();
-            System.Threading.Thread.Sleep(2000);
+            System.Threading.Thread.Sleep(25000);
 
-            KeyboardActions.PerformKeyboardActions();
+           
+
+           
+
+
+
+            //KeyboardActions.PerformKeyboardActions();
+        }
+        public static void Upload_Photo()
+        {
+           
+            Login_into_LinkedIn(driver);
+            UploadPhoto uploadphoto = new UploadPhoto(driver);
+            uploadphoto.post.Click();
+            System.Threading.Thread.Sleep(3000);
+            uploadphoto.photo.Click();
+            System.Threading.Thread.Sleep(3000);
+            AutoItX3 autoIt = new AutoItX3();
+            //Activating file upload window
+            autoIt.WinActivate("Open");
+            System.Threading.Thread.Sleep(2000);
+            //Sending the file path 
+            autoIt.Send(@"C:\Users\soubarnika.v\Downloads\Selenium.jfif");
+            System.Threading.Thread.Sleep(2000);
+            autoIt.Send("{ENTER}");
+            System.Threading.Thread.Sleep(3000);
+
+            uploadphoto.donebt.Click();
+            System.Threading.Thread.Sleep(3000);
+
+            uploadphoto.comments.SendKeys("Automation Testing using selenium");
+            System.Threading.Thread.Sleep(3000);
+
+            uploadphoto.postbt.Click();
+            System.Threading.Thread.Sleep(6000);
+
+            IAlert alert = driver.SwitchTo().Alert();
+            string msg=alert.Text;
+            if (msg.Equals("Post successful."))
+            {
+                Console.WriteLine("successful");
+            }
+            else
+            {
+                Console.WriteLine("failed"+msg);
+            }
+
         }
 
+        public static void Upload_Vedio()
+        {
+            
+            Login_into_LinkedIn(driver);
+            UploadVedio uploadVedio = new UploadVedio(driver);
+            uploadVedio.v_post.Click();
+            System.Threading.Thread.Sleep(3000);
+            uploadVedio.vedio.Click();
+            System.Threading.Thread.Sleep(3000);
+            AutoItX3 autoIt = new AutoItX3();
+            //Activating file upload window
+            autoIt.WinActivate("Open");
+            System.Threading.Thread.Sleep(2000);
+            //Sending the file path 
+            autoIt.Send(@"C:\Users\soubarnika.v\Downloads\Motivational-Video.mp4");
+            System.Threading.Thread.Sleep(2000);
+            autoIt.Send("{ENTER}");
+            System.Threading.Thread.Sleep(3000);
+
+            uploadVedio.v_donebt.Click();
+            System.Threading.Thread.Sleep(3000);
+
+            uploadVedio.v_comments.SendKeys("motivational vedio");
+            System.Threading.Thread.Sleep(3000);
+
+            uploadVedio.v_postbt.Click();
+            System.Threading.Thread.Sleep(40000);
+
+
+
+        }
         public static void Signup_LinkedIn()
         {
             //specifying file path
