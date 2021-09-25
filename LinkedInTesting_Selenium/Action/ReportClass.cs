@@ -1,10 +1,10 @@
-﻿using AventStack.ExtentReports;
+﻿/*Project =Selenium Automation Testing -LinkedIn 
+ * created by = Soubarnika Muthu
+ * date = 15/09/21
+ */
+using AventStack.ExtentReports;
 using AventStack.ExtentReports.Reporter;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+
 
 namespace LinkedInTesting_Selenium.Action
 {
@@ -24,6 +24,7 @@ namespace LinkedInTesting_Selenium.Action
                 string reportPath = @"C:\Users\soubarnika.v\source\repos\LinkedInTesting_Selenium\LinkedInTesting_Selenium\Reports\Report.html";
                 htmlReporter = new ExtentHtmlReporter(reportPath);
                 extent = new ExtentReports();
+                //attaching html reporter
                 extent.AttachReporter(htmlReporter);
                 extent.AddSystemInfo("OS", "Windows");
                 extent.AddSystemInfo("UserName", "Soubarnika");

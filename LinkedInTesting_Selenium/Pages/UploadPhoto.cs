@@ -20,11 +20,6 @@ namespace LinkedInTesting_Selenium.Pages
         [CacheLookup]
         public IWebElement post;
 
-
-        //[FindsBy(How = How.XPath, Using = "//body/div[6]/div[3]/div[1]/div[1]/div[2]/div[1]/div[1]/main[1]/div[1]/div[1]/div[2]/span[1]/button[1]/span[1]")]
-        //[CacheLookup]
-        //public IWebElement photo;
-
         [FindsBy(How = How.XPath, Using = "//body[1]/div[3]/div[1]/div[1]/div[2]/div[1]/div[1]/div[2]/div[2]/div[1]/span[1]/button[1]")]
         [CacheLookup]
         public IWebElement photo;
@@ -41,7 +36,11 @@ namespace LinkedInTesting_Selenium.Pages
         [CacheLookup]
         public IWebElement postbt;
 
-     
+        [FindsBy(How = How.XPath, Using = "//body[1]/div[1]/section[1]/ul[1]/li[1]")]
+        [CacheLookup]
+        public IWebElement msg;
+
+        
 
     }
 }

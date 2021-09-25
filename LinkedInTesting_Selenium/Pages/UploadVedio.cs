@@ -20,8 +20,6 @@ namespace LinkedInTesting_Selenium.Pages
         [CacheLookup]
         public IWebElement v_post;
 
-  
-
         [FindsBy(How = How.XPath, Using = "//body[1]/div[3]/div[1]/div[1]/div[2]/div[1]/div[1]/div[2]/div[2]/div[1]/span[2]/button[1]/li-icon[1]")]
         [CacheLookup]
         public IWebElement vedio;

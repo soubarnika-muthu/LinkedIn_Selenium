@@ -1,4 +1,8 @@
-﻿using AutoItX3Lib;
+﻿/*Project =Selenium Automation Testing -LinkedIn 
+ * created by = Soubarnika Muthu
+ * date = 15/09/21
+ */
+using AutoItX3Lib;
 using LinkedInTesting_Selenium.Operations;
 using LinkedInTesting_Selenium.Pages;
 using NUnit.Framework;
@@ -9,6 +13,7 @@ using System.Diagnostics;
 
 namespace LinkedInTesting_Selenium.Action
 {
+    [TestFixture]
     public class DoAction : Base.BaseClass
     {
         public static LoginPage login;
@@ -23,91 +28,104 @@ namespace LinkedInTesting_Selenium.Action
         //Method to enter login credentials into webpage
         public static void Login_into_LinkedIn(IWebDriver driver)
         {
-            login = new LoginPage(driver);
-            //specifying file path
-            //Takescreenshot();
-            ExcelOperations.PopulateInCollection(@"C:\Users\soubarnika.v\source\repos\LinkedInTesting_Selenium\LinkedInTesting_Selenium\TestDataFiles\Login_TestData.xlsx");
-            Debug.WriteLine("**");
-            //Reads data from excel file and enters data into webpage using sendkeys method
-            login.email.SendKeys(ExcelOperations.ReadData(1, "email"));
-            System.Threading.Thread.Sleep(2000);
+            try
+            {
+                login = new LoginPage(driver);
+                //specifying file path
+                ExcelOperations.PopulateInCollection(@"C:\Users\soubarnika.v\source\repos\LinkedInTesting_Selenium\LinkedInTesting_Selenium\TestDataFiles\Login_TestData.xlsx");
+                Debug.WriteLine("**");
+                //Reads data from excel file and enters data into webpage using sendkeys method
+                login.email.SendKeys(ExcelOperations.ReadData(1, "email"));
+                System.Threading.Thread.Sleep(2000);
 
-            login.password.SendKeys(ExcelOperations.ReadData(1, "password"));
-            System.Threading.Thread.Sleep(2000);
+                login.password.SendKeys(ExcelOperations.ReadData(1, "password"));
+                System.Threading.Thread.Sleep(2000);
 
-            //using the click function 
-            login.loginbt.Click();
-            System.Threading.Thread.Sleep(25000);
+                //using the click function 
+                login.loginbt.Click();
+                System.Threading.Thread.Sleep(25000);
 
-           
-
-           
-
-
-
-            //KeyboardActions.PerformKeyboardActions();
+               // KeyboardActions.PerformSearch();
+            }
+            catch(NoSuchElementException ex)
+            {
+                Console.WriteLine(ex.Message); ;
+            }
         }
         public static void Upload_Photo()
         {
-           
-            Login_into_LinkedIn(driver);
-            UploadPhoto uploadphoto = new UploadPhoto(driver);
-            uploadphoto.post.Click();
-            System.Threading.Thread.Sleep(3000);
-            uploadphoto.photo.Click();
-            System.Threading.Thread.Sleep(3000);
-            AutoItX3 autoIt = new AutoItX3();
-            //Activating file upload window
-            autoIt.WinActivate("Open");
-            System.Threading.Thread.Sleep(2000);
-            //Sending the file path 
-            autoIt.Send(@"C:\Users\soubarnika.v\Downloads\Selenium.jfif");
-            System.Threading.Thread.Sleep(2000);
-            autoIt.Send("{ENTER}");
-            System.Threading.Thread.Sleep(3000);
+            try
+            {
+                //calling login method
+                Login_into_LinkedIn(driver);
+                //creating instance of uploadpage class
+                UploadPhoto uploadphoto = new UploadPhoto(driver);
+                uploadphoto.post.Click();
+                System.Threading.Thread.Sleep(3000);
+                uploadphoto.photo.Click();
+                System.Threading.Thread.Sleep(3000);
+                AutoItX3 autoIt = new AutoItX3();
+                //Activating file upload window
+                autoIt.WinActivate("Open");
+                System.Threading.Thread.Sleep(2000);
+                //Sending the file path 
+                autoIt.Send(@"C:\Users\soubarnika.v\Downloads\Selenium.jfif");
+                System.Threading.Thread.Sleep(2000);
+                autoIt.Send("{ENTER}");
+                System.Threading.Thread.Sleep(3000);
 
-            uploadphoto.donebt.Click();
-            System.Threading.Thread.Sleep(3000);
+                uploadphoto.donebt.Click();
+                System.Threading.Thread.Sleep(3000);
 
-            uploadphoto.comments.SendKeys("Automation Testing using selenium");
-            System.Threading.Thread.Sleep(3000);
+                uploadphoto.comments.SendKeys("Automation Testing using selenium");
+                System.Threading.Thread.Sleep(3000);
 
-            uploadphoto.postbt.Click();
-            System.Threading.Thread.Sleep(6000);
+                uploadphoto.postbt.Click();
+                System.Threading.Thread.Sleep(6000);
 
-
+               // Takescreenshot();
+            }
+            catch(Exception e)
+            {
+                Console.WriteLine(e.Message);
+            }
         }
 
         public static void Upload_Vedio()
         {
-            
-            Login_into_LinkedIn(driver);
-            UploadVedio uploadVedio = new UploadVedio(driver);
-            uploadVedio.v_post.Click();
-            System.Threading.Thread.Sleep(3000);
-            uploadVedio.vedio.Click();
-            System.Threading.Thread.Sleep(3000);
-            AutoItX3 autoIt = new AutoItX3();
-            //Activating file upload window
-            autoIt.WinActivate("Open");
-            System.Threading.Thread.Sleep(2000);
-            //Sending the file path 
-            autoIt.Send(@"C:\Users\soubarnika.v\Downloads\Motivational-Video.mp4");
-            System.Threading.Thread.Sleep(2000);
-            autoIt.Send("{ENTER}");
-            System.Threading.Thread.Sleep(3000);
+            try
+            {
+                //calling login method
+                Login_into_LinkedIn(driver);
+                UploadVedio uploadVedio = new UploadVedio(driver);
+                uploadVedio.v_post.Click();
+                System.Threading.Thread.Sleep(3000);
+                uploadVedio.vedio.Click();
+                Takescreenshot();
+                System.Threading.Thread.Sleep(3000);
+                AutoItX3 autoIt = new AutoItX3();
+                //Activating file upload window
+                autoIt.WinActivate("Open");
+                System.Threading.Thread.Sleep(2000);
+                //Sending the file path 
+                autoIt.Send(@"C:\Users\soubarnika.v\Downloads\Motivational-Video.mp4");
+                System.Threading.Thread.Sleep(2000);
+                autoIt.Send("{ENTER}");
+                System.Threading.Thread.Sleep(3000);
 
-            uploadVedio.v_donebt.Click();
-            System.Threading.Thread.Sleep(3000);
+                uploadVedio.v_donebt.Click();
+                System.Threading.Thread.Sleep(3000);
 
-            uploadVedio.v_comments.SendKeys("motivational vedio");
-            System.Threading.Thread.Sleep(3000);
+                uploadVedio.v_comments.SendKeys("motivational vedio");
+                System.Threading.Thread.Sleep(3000);
 
-            uploadVedio.v_postbt.Click();
-            System.Threading.Thread.Sleep(40000);
-
-
-
+                uploadVedio.v_postbt.Click();
+                System.Threading.Thread.Sleep(40000);
+            }
+            catch(Exception e)
+            {
+                Console.WriteLine(e.Message);
+            }
         }
         public static void Signup_LinkedIn()
         {
@@ -158,13 +176,7 @@ namespace LinkedInTesting_Selenium.Action
             //city.SendKeys(Keys.Enter);
             //System.Threading.Thread.Sleep(2000);
         }
-        public static void Takescreenshot()
-        {
-            ITakesScreenshot screenshotDriver = driver as ITakesScreenshot;
-            Screenshot screenshot = screenshotDriver.GetScreenshot();
-            screenshot.SaveAsFile(@"C:\Users\soubarnika.v\source\repos\LinkedInTesting_Selenium\LinkedInTesting_Selenium\ScreenShot\"+ DateTime.Now.ToString("HHmmss") + ".png");
-        
-        }
+       
 
 
     }
