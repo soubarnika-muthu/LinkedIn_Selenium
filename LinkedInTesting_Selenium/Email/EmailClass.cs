@@ -40,7 +40,7 @@ namespace LinkedInTesting_Selenium.Email
                 //Subject of the mail is added
                 mail.Subject = "Linkedin test mail";
                 //Body of the mail is added
-                mail.Body = "mail with amazon report attachmement";
+                mail.Body = "mail with LinkedIn report attachmement";
                 Attachment attachment;
                 attachment = new Attachment(@"C:\Users\soubarnika.v\source\repos\LinkedInTesting_Selenium\LinkedInTesting_Selenium\Reports\index.html");
                 Assert.NotNull(attachment);

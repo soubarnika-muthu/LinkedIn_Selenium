@@ -20,7 +20,7 @@ namespace LinkedInTesting_Selenium.Base
         //initialization
         public static IWebDriver driver;
         //Get Logger for fully qualified name for type of 'Tests'
-        private static readonly ILog log = LogManager.GetLogger(typeof(Tests));
+        private static readonly ILog log = LogManager.GetLogger(typeof(PositiveTestCases));
 
         //Get the default ILoggingRepository
         private static readonly ILoggerRepository repository = log4net.LogManager.GetRepository(Assembly.GetCallingAssembly());
@@ -51,7 +51,10 @@ namespace LinkedInTesting_Selenium.Base
 
                     case "chrome":
                         //Creating an instance of chrome webdriver
-                        driver = new ChromeDriver();
+                        ChromeOptions options = new ChromeOptions();
+                        options.AddArguments("--disable-notifications");
+                        options.AddArguments("--disable-bubbles");
+                        driver = new ChromeDriver(options);
                         break;
                     case "firefox":
                         //Creating an instance of firefox webdriver
@@ -61,7 +64,7 @@ namespace LinkedInTesting_Selenium.Base
                         driver = new ChromeDriver();
                         break;
                 }
-
+                
                 //print which browser is started
                 Console.WriteLine(browser + " Started");
                 log.Debug("navigating to url");

@@ -352,3 +352,150 @@
 2021-09-25 07:04:20,494 INFO Entering Setup
 2021-09-25 07:04:24,200 DEBUG navigating to url
 2021-09-25 07:04:24,202 INFO Exiting setup
+2021-09-25 10:29:40,614 INFO Entering Setup
+2021-09-25 10:29:42,801 DEBUG navigating to url
+2021-09-25 10:29:44,731 INFO Exiting setup
+2021-09-25 10:30:38,955 INFO Entering Setup
+2021-09-25 10:30:40,781 DEBUG navigating to url
+2021-09-25 10:30:42,428 INFO Exiting setup
+2021-09-25 10:30:43,191 INFO Entering Setup
+2021-09-25 10:30:45,114 DEBUG navigating to url
+2021-09-25 10:30:46,545 INFO Exiting setup
+2021-09-25 10:31:09,387 INFO Entering Setup
+2021-09-25 10:31:11,716 DEBUG navigating to url
+2021-09-25 10:31:13,573 INFO Exiting setup
+2021-09-25 10:31:53,557 INFO Entering Setup
+2021-09-25 10:31:55,482 DEBUG navigating to url
+2021-09-25 10:31:57,300 INFO Exiting setup
+2021-09-25 10:31:57,802 INFO Entering Setup
+2021-09-25 10:31:59,765 DEBUG navigating to url
+2021-09-25 10:32:01,410 INFO Exiting setup
+2021-09-25 10:33:05,591 INFO Entering Setup
+2021-09-25 10:33:07,841 DEBUG navigating to url
+2021-09-25 10:33:09,396 INFO Exiting setup
+2021-09-27 08:09:49,547 INFO Entering Setup
+2021-09-27 08:09:53,566 DEBUG navigating to url
+2021-09-27 08:09:54,969 INFO Exiting setup
+2021-09-27 08:12:51,395 INFO Entering Setup
+2021-09-27 08:12:53,282 DEBUG navigating to url
+2021-09-27 08:12:54,858 INFO Exiting setup
+2021-09-27 08:14:57,911 INFO Entering Setup
+2021-09-27 08:14:59,879 DEBUG navigating to url
+2021-09-27 08:15:01,198 INFO Exiting setup
+2021-09-27 08:16:35,411 INFO Entering Setup
+2021-09-27 08:16:37,209 DEBUG navigating to url
+2021-09-27 08:16:38,683 INFO Exiting setup
+2021-09-27 08:17:41,858 INFO Entering Setup
+2021-09-27 08:17:43,822 DEBUG navigating to url
+2021-09-27 08:17:45,335 INFO Exiting setup
+2021-09-27 08:19:32,836 INFO Entering Setup
+2021-09-27 08:19:34,817 DEBUG navigating to url
+2021-09-27 08:19:36,124 INFO Exiting setup
+2021-09-27 08:22:43,916 INFO Entering Setup
+2021-09-27 08:22:45,818 DEBUG navigating to url
+2021-09-27 08:22:47,419 INFO Exiting setup
+2021-09-27 08:24:43,839 INFO Entering Setup
+2021-09-27 08:24:45,857 DEBUG navigating to url
+2021-09-27 08:24:47,433 INFO Exiting setup
+2021-09-27 08:41:57,891 INFO Entering Setup
+2021-09-27 08:41:59,918 DEBUG navigating to url
+2021-09-27 08:42:01,295 INFO Exiting setup
+2021-09-27 08:58:51,461 INFO Entering Setup
+2021-09-27 08:58:53,380 DEBUG navigating to url
+2021-09-27 08:58:54,771 INFO Exiting setup
+2021-09-27 09:05:19,898 INFO Entering Setup
+2021-09-27 09:05:21,820 DEBUG navigating to url
+2021-09-27 09:05:23,132 INFO Exiting setup
+2021-09-27 09:06:53,009 INFO Entering Setup
+2021-09-27 09:06:54,897 DEBUG navigating to url
+2021-09-27 09:06:56,350 INFO Exiting setup
+2021-09-27 09:08:32,073 INFO Entering Setup
+2021-09-27 09:08:34,139 DEBUG navigating to url
+2021-09-27 09:08:35,482 INFO Exiting setup
+2021-09-27 09:10:52,816 INFO Entering Setup
+2021-09-27 09:10:54,722 DEBUG navigating to url
+2021-09-27 09:10:56,711 INFO Exiting setup
+2021-09-27 09:21:55,557 INFO Entering Setup
+2021-09-27 09:21:57,536 DEBUG navigating to url
+2021-09-27 09:21:59,083 INFO Exiting setup
+2021-09-27 10:09:36,812 INFO Entering Setup
+2021-09-27 10:09:38,870 DEBUG navigating to url
+2021-09-27 10:09:40,208 INFO Exiting setup
+2021-09-27 10:15:37,796 INFO Entering Setup
+2021-09-27 10:15:39,797 DEBUG navigating to url
+2021-09-27 10:15:41,499 INFO Exiting setup
+2021-09-27 10:16:25,026 INFO Entering Setup
+2021-09-27 10:16:26,990 DEBUG navigating to url
+2021-09-27 10:16:28,415 INFO Exiting setup
+2021-09-27 12:08:47,456 INFO Entering Setup
+2021-09-27 12:08:49,576 DEBUG navigating to url
+2021-09-27 12:08:51,421 INFO Exiting setup
+2021-09-27 12:09:40,428 INFO Entering Setup
+2021-09-27 12:09:42,340 DEBUG navigating to url
+2021-09-27 12:09:44,136 INFO Exiting setup
+2021-09-27 12:09:44,559 INFO Entering Setup
+2021-09-27 12:09:46,333 DEBUG navigating to url
+2021-09-27 12:09:47,955 INFO Exiting setup
+2021-09-27 12:09:48,338 INFO Entering Setup
+2021-09-27 12:09:50,120 DEBUG navigating to url
+2021-09-27 12:09:51,595 INFO Exiting setup
+2021-09-27 12:09:51,933 INFO Entering Setup
+2021-09-27 12:09:53,725 DEBUG navigating to url
+2021-09-27 12:09:55,252 INFO Exiting setup
+2021-09-27 12:25:03,007 INFO Entering Setup
+2021-09-27 12:25:05,158 DEBUG navigating to url
+2021-09-27 12:25:06,859 INFO Exiting setup
+2021-09-27 12:26:45,925 INFO Entering Setup
+2021-09-27 12:26:48,119 DEBUG navigating to url
+2021-09-27 12:26:49,801 INFO Exiting setup
+2021-09-27 12:31:46,322 INFO Entering Setup
+2021-09-27 12:31:48,421 DEBUG navigating to url
+2021-09-27 12:31:50,207 INFO Exiting setup
+2021-09-27 12:56:21,633 INFO Entering Setup
+2021-09-27 12:56:23,782 DEBUG navigating to url
+2021-09-27 12:56:25,330 INFO Exiting setup
+2021-09-27 12:56:47,548 INFO Entering Setup
+2021-09-27 12:56:49,512 DEBUG navigating to url
+2021-09-27 12:56:50,816 INFO Exiting setup
+2021-09-27 12:56:51,431 INFO Entering Setup
+2021-09-27 12:56:53,335 DEBUG navigating to url
+2021-09-27 12:56:54,825 INFO Exiting setup
+2021-09-27 12:56:55,399 INFO Entering Setup
+2021-09-27 12:56:57,363 DEBUG navigating to url
+2021-09-27 12:56:58,890 INFO Exiting setup
+2021-09-27 12:56:59,318 INFO Entering Setup
+2021-09-27 12:57:01,318 DEBUG navigating to url
+2021-09-27 12:57:02,682 INFO Exiting setup
+2021-09-27 13:03:40,205 INFO Entering Setup
+2021-09-27 13:03:42,500 DEBUG navigating to url
+2021-09-27 13:03:43,925 INFO Exiting setup
+2021-09-27 13:04:03,975 INFO Entering Setup
+2021-09-27 13:04:05,855 DEBUG navigating to url
+2021-09-27 13:04:07,371 INFO Exiting setup
+2021-09-27 13:04:07,973 INFO Entering Setup
+2021-09-27 13:04:09,837 DEBUG navigating to url
+2021-09-27 13:04:11,279 INFO Exiting setup
+2021-09-27 13:43:56,416 INFO Entering Setup
+2021-09-27 13:43:58,876 DEBUG navigating to url
+2021-09-27 13:44:00,733 INFO Exiting setup
+2021-09-27 13:44:57,294 INFO Entering Setup
+2021-09-27 13:45:00,390 DEBUG navigating to url
+2021-09-27 13:45:03,468 INFO Exiting setup
+2021-09-27 13:45:04,092 INFO Entering Setup
+2021-09-27 13:45:06,879 DEBUG navigating to url
+2021-09-27 13:45:09,591 INFO Exiting setup
+2021-09-27 13:45:10,005 INFO Entering Setup
+2021-09-27 13:45:12,079 DEBUG navigating to url
+2021-09-27 13:45:14,022 INFO Exiting setup
+2021-09-27 14:08:09,261 INFO Entering Setup
+2021-09-27 14:08:13,076 DEBUG navigating to url
+2021-09-27 14:08:15,526 INFO Exiting setup
+2021-09-27 14:09:18,031 INFO Entering Setup
+2021-09-27 14:09:20,467 DEBUG navigating to url
+2021-09-27 14:09:22,536 INFO Exiting setup
+2021-09-27 14:09:23,128 INFO Entering Setup
+2021-09-27 14:09:25,078 DEBUG navigating to url
+2021-09-27 14:09:26,450 INFO Exiting setup
+2021-09-27 14:09:26,958 INFO Entering Setup
+2021-09-27 14:09:28,934 DEBUG navigating to url
+2021-09-27 14:09:30,302 INFO Exiting setup

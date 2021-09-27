@@ -43,11 +43,63 @@ namespace LinkedInTesting_Selenium.Action
 
                 //using the click function 
                 login.loginbt.Click();
-                System.Threading.Thread.Sleep(25000);
+                System.Threading.Thread.Sleep(10000);
 
-               // KeyboardActions.PerformSearch();
+                // KeyboardActions.PerformSearch();
             }
-            catch(NoSuchElementException ex)
+            catch (NoSuchElementException ex)
+            {
+                Console.WriteLine(ex.Message); ;
+            }
+        }
+        public static void InvalidPassword(IWebDriver driver)
+        {
+            try
+            {
+                login = new LoginPage(driver);
+                //specifying file path
+                ExcelOperations.PopulateInCollection(@"C:\Users\soubarnika.v\source\repos\LinkedInTesting_Selenium\LinkedInTesting_Selenium\TestDataFiles\Login_TestData.xlsx");
+                Debug.WriteLine("**");
+                //Reads data from excel file and enters data into webpage using sendkeys method
+                login.email.SendKeys(ExcelOperations.ReadData(2, "email"));
+                System.Threading.Thread.Sleep(2000);
+
+                login.password.SendKeys(ExcelOperations.ReadData(2, "password"));
+                System.Threading.Thread.Sleep(2000);
+
+                //using the click function 
+                login.loginbt.Click();
+                System.Threading.Thread.Sleep(15000);
+
+                // KeyboardActions.PerformSearch();
+            }
+            catch (NoSuchElementException ex)
+            {
+                Console.WriteLine(ex.Message); ;
+            }
+        }
+        public static void WrongPassword(IWebDriver driver)
+        {
+            try
+            {
+                login = new LoginPage(driver);
+                //specifying file path
+                ExcelOperations.PopulateInCollection(@"C:\Users\soubarnika.v\source\repos\LinkedInTesting_Selenium\LinkedInTesting_Selenium\TestDataFiles\Login_TestData.xlsx");
+                Debug.WriteLine("**");
+                //Reads data from excel file and enters data into webpage using sendkeys method
+                login.email.SendKeys(ExcelOperations.ReadData(3, "email"));
+                System.Threading.Thread.Sleep(2000);
+
+                login.password.SendKeys(ExcelOperations.ReadData(3, "password"));
+                System.Threading.Thread.Sleep(2000);
+
+                //using the click function 
+                login.loginbt.Click();
+                System.Threading.Thread.Sleep(15000);
+
+                // KeyboardActions.PerformSearch();
+            }
+            catch (NoSuchElementException ex)
             {
                 Console.WriteLine(ex.Message); ;
             }
@@ -57,8 +109,22 @@ namespace LinkedInTesting_Selenium.Action
             try
             {
                 //calling login method
-                Login_into_LinkedIn(driver);
+                // Login_into_LinkedIn(driver);
                 //creating instance of uploadpage class
+                login = new LoginPage(driver);
+                //specifying file path
+                ExcelOperations.PopulateInCollection(@"C:\Users\soubarnika.v\source\repos\LinkedInTesting_Selenium\LinkedInTesting_Selenium\TestDataFiles\Login_TestData.xlsx");
+                Debug.WriteLine("**");
+                //Reads data from excel file and enters data into webpage using sendkeys method
+                login.email.SendKeys(ExcelOperations.ReadData(1, "email"));
+                System.Threading.Thread.Sleep(2000);
+
+                login.password.SendKeys(ExcelOperations.ReadData(1, "password"));
+                System.Threading.Thread.Sleep(2000);
+
+                //using the click function 
+                login.loginbt.Click();
+                System.Threading.Thread.Sleep(10000);
                 UploadPhoto uploadphoto = new UploadPhoto(driver);
                 uploadphoto.post.Click();
                 System.Threading.Thread.Sleep(3000);
@@ -83,9 +149,9 @@ namespace LinkedInTesting_Selenium.Action
                 uploadphoto.postbt.Click();
                 System.Threading.Thread.Sleep(6000);
 
-               // Takescreenshot();
+                // Takescreenshot();
             }
-            catch(Exception e)
+            catch (NoSuchElementException e)
             {
                 Console.WriteLine(e.Message);
             }
@@ -122,7 +188,7 @@ namespace LinkedInTesting_Selenium.Action
                 uploadVedio.v_postbt.Click();
                 System.Threading.Thread.Sleep(40000);
             }
-            catch(Exception e)
+            catch (NoSuchElementException e)
             {
                 Console.WriteLine(e.Message);
             }
@@ -153,7 +219,7 @@ namespace LinkedInTesting_Selenium.Action
             System.Threading.Thread.Sleep(2000);
 
             driver.FindElement(By.Id("join-form-submit")).Click();
-            System.Threading.Thread.Sleep(30000);
+            System.Threading.Thread.Sleep(40000);
 
             //// IWebElement country = ;
             // SelectElement country = new SelectElement(driver.FindElement(By.Id("select-register-phone-country")));
@@ -164,11 +230,11 @@ namespace LinkedInTesting_Selenium.Action
 
             //driver.FindElement(By.Id("register-phone-submit-button")).Click();
             //System.Threading.Thread.Sleep(2000);
-            driver.FindElement(By.Id("register-phone-submit-button")).Click();
-            System.Threading.Thread.Sleep(10000);
+            // driver.FindElement(By.Id("register-phone-submit-button")).Click();
+            // System.Threading.Thread.Sleep(10000);
 
             //IWebElement = //
-            //IWebElement city = driver.FindElement(By.Id("typeahead-input-for-city-district"));
+            //IWebElement city = driver.FindElement(By.Id("//body[1]/div[6]/div[2]/div[1]/div[2]/div[1]/div[1]/main[1]/div[1]/div[1]/div[1]/div[1]/section[1]/div[1]/div[2]/div[1]/div[1]/input[1]"));
             //city.SendKeys(ExcelOperations.ReadData(1, "city"));
             //System.Threading.Thread.Sleep(2000);
             //city.SendKeys(Keys.ArrowDown);
@@ -176,8 +242,42 @@ namespace LinkedInTesting_Selenium.Action
             //city.SendKeys(Keys.Enter);
             //System.Threading.Thread.Sleep(2000);
         }
-       
+        public static void Sending_Message()
+        {
 
+            try
+            {
+                //calling login method
+                Login_into_LinkedIn(driver);
+                //creating instance of messaging class
+                Messaging message = new Messaging(driver);
+                message.msg.Click();
+                System.Threading.Thread.Sleep(3000);
+                message.penoption.Click();
+                System.Threading.Thread.Sleep(3000);
+                message.penoption.Click();
+                System.Threading.Thread.Sleep(3000);
+                message.searchterm.Click();
+                System.Threading.Thread.Sleep(3000);
+                message.searchterm.SendKeys("Soubarnika Muthu");
+                System.Threading.Thread.Sleep(3000);
+                message.searchterm.SendKeys(Keys.ArrowDown);
+                System.Threading.Thread.Sleep(3000);
+                message.searchterm.SendKeys(Keys.Enter);
+                System.Threading.Thread.Sleep(3000);
+                message.write.Click();
+                System.Threading.Thread.Sleep(3000);
+                message.write.SendKeys("Hii soubarnika");
+                System.Threading.Thread.Sleep(3000);
+                message.sendbt.Click();
+                System.Threading.Thread.Sleep(3000);
+
+            }
+            catch (NoSuchElementException e)
+            {
+                Console.WriteLine(e.Message);
+            }
+        }
 
     }
 }
