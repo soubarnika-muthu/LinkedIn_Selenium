@@ -28,7 +28,14 @@ namespace LinkedInTesting_Selenium.Pages
         [CacheLookup]
         public IWebElement loginbt;
 
-       
+        //specify the locator of the search box
+        [FindsBy(How = How.XPath, Using = "//header/div[1]/div[1]/div[1]/div[1]/input[1]")]
+        [CacheLookup]
+        public IWebElement searchbar;
+        //specify the locator of the username error
+        [FindsBy(How = How.Id, Using = "error-for-username")]
+        [CacheLookup]
+        public IWebElement errormsg;
 
     }
 

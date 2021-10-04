@@ -16,7 +16,7 @@ namespace LinkedInTesting_Selenium.Pages
         }
         //Upload a photo
 
-        [FindsBy(How = How.XPath, Using = "//*[@id='ember44']")]
+        [FindsBy(How = How.XPath, Using = "//*[@id='ember45']")]
         [CacheLookup]
         public IWebElement post;
 

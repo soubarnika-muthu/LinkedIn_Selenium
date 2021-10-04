@@ -30,7 +30,7 @@ namespace LinkedInTesting_Selenium.Pages
         [CacheLookup]
         public IWebElement searchterm;
 
-        [FindsBy(How = How.XPath, Using = "//body[1]/div[6]/div[3]/div[2]/div[1]/div[1]/main[1]/div[1]/section[2]/div[1]/form[1]/div[2]/div[1]/div[1]/div[1]/p[1]")]
+        [FindsBy(How = How.XPath, Using ="//body[1]/div[5]/div[3]/div[2]/div[1]/div[1]/main[1]/div[1]/section[2]/div[1]/form[1]/div[3]/div[1]/div[1]/div[1]")]
         [CacheLookup]
         public IWebElement write;
 

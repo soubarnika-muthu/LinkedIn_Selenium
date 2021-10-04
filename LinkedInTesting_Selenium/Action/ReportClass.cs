@@ -5,7 +5,6 @@
 using AventStack.ExtentReports;
 using AventStack.ExtentReports.Reporter;
 
-
 namespace LinkedInTesting_Selenium.Action
 {
     public class ReportClass

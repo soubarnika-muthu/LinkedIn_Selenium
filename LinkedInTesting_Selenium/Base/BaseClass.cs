@@ -14,17 +14,18 @@ using System.Reflection;
 
 namespace LinkedInTesting_Selenium.Base
 {
-    [TestFixture]
+
     public class BaseClass
     {
         //initialization
         public static IWebDriver driver;
         //Get Logger for fully qualified name for type of 'Tests'
-        private static readonly ILog log = LogManager.GetLogger(typeof(PositiveTestCases));
+        private static readonly ILog log = LogManager.GetLogger(typeof(TestCases));
 
         //Get the default ILoggingRepository
         private static readonly ILoggerRepository repository = log4net.LogManager.GetRepository(Assembly.GetCallingAssembly());
         protected string browser;
+
         //default constructor
         public BaseClass()
         {
@@ -35,8 +36,10 @@ namespace LinkedInTesting_Selenium.Base
         {
             this.browser = browser;
         }
+
+
         [SetUp]
-        public void Initialize()
+        public void BrowserTest()
         {
 
             var fileInfo = new FileInfo(@"Log4net.config");
@@ -46,6 +49,7 @@ namespace LinkedInTesting_Selenium.Base
             log.Info("Entering Setup");
             try
             {
+
                 switch (browser)
                 {
 
@@ -53,7 +57,7 @@ namespace LinkedInTesting_Selenium.Base
                         //Creating an instance of chrome webdriver
                         ChromeOptions options = new ChromeOptions();
                         options.AddArguments("--disable-notifications");
-                        options.AddArguments("--disable-bubbles");
+
                         driver = new ChromeDriver(options);
                         break;
                     case "firefox":
@@ -64,9 +68,9 @@ namespace LinkedInTesting_Selenium.Base
                         driver = new ChromeDriver();
                         break;
                 }
-                
                 //print which browser is started
                 Console.WriteLine(browser + " Started");
+
                 log.Debug("navigating to url");
                 driver.Url = "https://www.linkedin.com/";
                 // To maximize browser
@@ -83,6 +87,7 @@ namespace LinkedInTesting_Selenium.Base
 
         public static void Takescreenshot()
         {
+            //using interface Itakescreenshot
             ITakesScreenshot screenshotDriver = driver as ITakesScreenshot;
             Screenshot screenshot = screenshotDriver.GetScreenshot();
             screenshot.SaveAsFile(@"C:\Users\soubarnika.v\source\repos\LinkedInTesting_Selenium\LinkedInTesting_Selenium\ScreenShot\" + DateTime.Now.ToString("HHmmss") + ".png");

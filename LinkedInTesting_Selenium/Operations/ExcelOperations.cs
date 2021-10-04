@@ -30,7 +30,9 @@ namespace LinkedInTesting_Selenium.Operations
             });
             DataTableCollection table = resultSet.Tables;
             DataTable resultTable = table["Sheet1"];
+            stream.Close();
             return resultTable;
+            
         }
         //creating list
         static List<DataCollection> dataCol = new List<DataCollection>();
@@ -59,7 +61,7 @@ namespace LinkedInTesting_Selenium.Operations
         {
             try
             {
-                string data = (from colData in dataCol where colData.colName == columnName && colData.rowNumber == rowNumber select colData.colValue).SingleOrDefault();
+                string data = (from colData in dataCol where colData.colName == columnName && colData.rowNumber == rowNumber select colData.colValue).First();
                 return data.ToString();
             }
             catch (Exception e)
